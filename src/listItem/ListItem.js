@@ -7,11 +7,8 @@ import { AiFillDislike } from "react-icons/ai";
 import { useEffect } from "react";
 export default function ListItem({ index, movie }) {
   const [isHovered, setIsHovered] = useState(false);
-  const refColor=useRef();
-  const stateChange = () =>{
-    
-    refColor.current.style.color= '#fff';
-    }
+  
+
   return (
     <div className="ListItem">
       <img
@@ -24,7 +21,7 @@ export default function ListItem({ index, movie }) {
         <div className="nameFilm">{movie.title}</div>
         <div className="icons">
           <FaPlay className="icon"></FaPlay>
-          <IoMdAddCircle className="icon" ref={refColor} onClick={stateChange}></IoMdAddCircle>
+          <IoMdAddCircle className="icon" ></IoMdAddCircle>
           <AiFillLike className="icon"></AiFillLike>
           <AiFillDislike className="icon"></AiFillDislike>
         </div>
